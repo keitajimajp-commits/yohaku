@@ -1,0 +1,177 @@
+/* 全体（UI含む） */
+body {
+  font-size: 14.5px !important; /* 14〜15.5で調整 */
+  line-height: 1.75;
+}
+
+/* PaperModの本文ブロックは別にサイズを持つことがあるので潰す */
+.post-content,
+.post-single,
+.entry-content,
+.page-content {
+  font-size: 1em !important;
+}
+
+/* 見出しがデカい問題も同時に落とす（必要なら調整） */
+.post-title { font-size: 1.6rem !important; }
+h1 { font-size: 1.9rem !important; }
+h2 { font-size: 1.35rem !important; }
+h3 { font-size: 1.15rem !important; }
+
+/* ナビやフッタが相対で大きい場合 */
+.nav, .menu, .logo, .header {
+  font-size: 0.95em !important;
+}
+
+body{
+  background: linear-gradient(180deg, #f3f1ec 0%, #eef2f4 100%) !important;
+}
+
+/* PaperModが塗ってくる背景を消す */
+.main, .page-header, .post-single, .entry, .terms-tags {
+  background: transparent !important;
+}
+
+/* homeだけ：本文先頭の画像 */
+.home .post-content p:first-child img{
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  margin: 8px 0 28px;
+  display: block;
+}
+/* トップページのロゴだけ明朝 */
+body .logo {
+ font-family: "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+/* フッター完全削除 */
+footer.footer { display: none !important; }
+.kei-footer {
+  margin-top: 100px;
+  padding: 48px 32px;
+  font-size: 14px;
+  color: rgba(0,0,0,0.55);
+}
+
+.kei-footer-inner {
+/*  max-width: 1200px; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.kei-footer-home {
+  font-weight: normal;
+}
+.kei-footer {
+  margin-top: 10px;
+}
+
+/* 背景グラデーション：上やや濃く、下はほぼ白 */
+body {
+  background: linear-gradient(
+    180deg,
+    #edece2 0%,   /* 黄色を抑えて青グレー寄り */
+    #f2f1ea 28%,
+    #eef3f7 62%,
+    #fcfdfd 100%
+  ) !important;
+}
+
+
+/* PaperModが塗る背景を透明にして、グラデを見せる */
+.main, .page-header, .post-single, .entry, .terms-tags {
+  background: transparent !important;
+}
+
+/* トップのヒーロー */
+.hero{
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 12px 0 28px;
+}
+
+.hero-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.05); /* 任意：写真が眠い時だけ */
+}
+
+/* 画像上の本文 */
+.hero-text{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 18px 18px 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.42) 100%
+  );
+
+  color: rgba(255,255,255,0.86);
+  text-indent: 0; /* ①の字下げを殺す（hero内だけ） */
+}
+
+.hero-text p{
+  margin: 0.25em 0;
+  text-indent: 0; /* 念のため */
+  font-size: 16px !important; /* 14〜15.5で調整 */
+  line-height: 2;
+}
+
+/* 本文ブロックを内側に（PaperModに勝つ） */
+.post-content,
+.page-content,
+.entry-content {
+  padding-left: 3.0rem !important;
+  padding-right: 0.6rem !important;
+}
+.post-content h1,
+.post-content h2,
+.post-content h3{
+  margin-left: -0.6rem;
+}
+
+/* ヒーローは本文インデントの影響を受けない */
+.hero { margin-left: -3rem; margin-right: -0.6rem; }
+.hero, .hero * { box-shadow:none !important; }
+
+/* ヒーロー内の画像は余白ゼロ（帯の正体） */
+.hero-img {
+  margin: 0 !important;
+}
+
+/* 画像を包む要素の余白もゼロにする（保険） */
+.hero p,
+.hero figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* About：冒頭を“導入”として整える */
+body.page-about .post-content > p:first-of-type,
+body.page-about .post-content > p:nth-of-type(2){
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+
+/* About：冒頭ブロックを少しだけ内側＆行間を整える */
+body.page-about .post-content{
+  padding-left: 1.4rem !important;
+  padding-right: 0.6rem !important;
+}
+/* タイトル直下に出る説明（.Description）を非表示 */
+.page-header .post-description,
+.page-header .entry-description,
+.page-header .page-description,
+.first-entry .entry-content {
+  display: none !important;
+}

@@ -1,0 +1,49 @@
+baseURL = "http://localhost:1313/"
+languageCode = "ja"
+defaultContentLanguage = "ja"
+title = "余白 / yohaku"
+theme = "PaperMod"
+themesDir = "themes"
+
+# 不要な自動生成を止める
+disableKinds = ["RSS", "taxonomy", "term"]
+
+[params]
+  defaultTheme = "light"
+  disableThemeToggle = true
+  hideFooter = true
+  mainSections = []
+  ShowBreadCrumbs = false
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowCodeCopyButtons = false
+  ShowToc = false
+  socialIcons = []
+  customCSS = ["css/custom.css"]
+[menu]
+  [[menu.main]]
+    name = "Top"
+    url = "/"
+    weight = 10
+    title = "トップページ"
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 20
+    title = "余白について"
+  [[menu.main]]
+    name = "Dialogue"
+    url = "/dialogue/"
+    weight = 30
+    title = "対話について"
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 40
+    title = "お問い合わせ"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

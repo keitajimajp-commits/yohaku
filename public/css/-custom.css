@@ -1,0 +1,30 @@
+body { outline: 8px solid red !important; }
+/* 全体の文字サイズ */
+html { font-size: 12px; }  /* 14〜16で好み調整 */
+body { line-height: 1.75; }
+
+/* 見出しの圧を少し落とす */
+h1 { font-size: 2.0rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; }
+
+/* 本文の幅が広すぎると“でかく”見えるので少し絞る */
+.main { max-width: 720px; }
+
+/* 背景をグラデーションに（強くしないのがコツ） */
+body {
+  background: linear-gradient(180deg,
+    #f6f3ee 0%,
+    #f2f5f7 100%
+  );
+}
+
+/* コンテンツ部分は背景から浮かせず、馴染ませる */
+.main {
+  background: transparent;
+}
+
+:root{
+  --theme: transparent;   /* body背景を使う */
+  --entry: rgba(255,255,255,0.55); /* 記事カードっぽい部分が出る場合に薄める */
+}
