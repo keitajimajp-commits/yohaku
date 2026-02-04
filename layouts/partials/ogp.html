@@ -1,0 +1,7 @@
+<!-- layouts/partials/ogp.html -->
+{{ with .Title }}<meta property="og:title" content="{{ . }}">{{ end }}
+{{ with .Description }}<meta property="og:description" content="{{ . }}">{{ end }}
+{{ with .Permalink }}<meta property="og:url" content="{{ . }}">{{ end }}
+<meta property="og:type" content="website">
+{{ with .Site.Params.ogpImage }}<meta property="og:image" content="{{ . }}">{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
