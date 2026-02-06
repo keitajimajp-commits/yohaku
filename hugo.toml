@@ -21,7 +21,7 @@ disableKinds = ["RSS", "taxonomy", "term"]
   ShowToc = false
   socialIcons = []
   customCSS = ["css/custom.css"]
-  ogpImage = "https://yohaku.keitajima.jp/img/ogp-default.png"
+  ogpImage = "https://yohaku-dialogue.jp/img/ogp-default.png"
 [menu]
   [[menu.main]]
     name = "Top"

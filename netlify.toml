@@ -4,3 +4,9 @@
 
 [build.environment]
   HUGO_VERSION = "0.154.1"
+
+[[redirects]]
+  from = "https://yohaku.keitajima.jp/*"
+  to = "https://yohaku-dialogue.jp/:splat"
+  status = 301
+  force = true
