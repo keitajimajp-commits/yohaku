@@ -19,7 +19,10 @@ disableKinds = ["RSS", "taxonomy", "term"]
   ShowPostNavLinks = false
   ShowCodeCopyButtons = false
   ShowToc = false
-  socialIcons = []
+ socialIcons = [
+  { name = "instagram", url = "https://www.instagram.com/keitajima.jp/" },
+  { name = "link", url = "https://note.com/keitajima" }
+  ]
   customCSS = ["css/custom.css"]
   ogpImage = "https://yohaku-dialogue.jp/img/ogp-default.png"
 [menu]

@@ -3,6 +3,9 @@ body {
   font-size: 14.5px !important; /* 14〜15.5で調整 */
   line-height: 1.75;
 }
+.main {
+  padding-top: 2rem;
+}
 
 /* PaperModの本文ブロックは別にサイズを持つことがあるので潰す */
 .post-content,
@@ -45,29 +48,6 @@ body .logo {
  font-family: "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
   font-weight: normal;
   letter-spacing: 0.02em;
-}
-
-/* フッター完全削除 */
-footer.footer { display: none !important; }
-.kei-footer {
-  margin-top: 100px;
-  padding: 48px 32px;
-  font-size: 14px;
-  color: rgba(0,0,0,0.55);
-}
-
-.kei-footer-inner {
-/*  max-width: 1200px; */
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.kei-footer-home {
-  font-weight: normal;
-}
-.kei-footer {
-  margin-top: 10px;
 }
 
 /* 背景グラデーション：上やや濃く、下はほぼ白 */
@@ -174,4 +154,91 @@ body.page-about .post-content{
 .page-header .page-description,
 .first-entry .entry-content {
   display: none !important;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer{
+  margin-top:2rem;
+  padding:2rem 2rem 1rem;
+  font-size:0.875rem;
+}
+
+/* 左右レイアウト */
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* 左側（コピー＋SNS） */
+.footer-left{
+  display:flex;
+  align-items:center;
+}
+.footer-right a{
+  font-size:0.8em;
+  opacity:0.7;
+}
+
+.footer-right a:hover{
+  opacity:1;
+}
+/* コピー */
+.footer-left span{
+  letter-spacing:0.03em;
+}
+
+/* =========================
+   SNS icons
+========================= */
+
+.footer-left .social-icons{
+  display:flex;
+  align-items:center;
+  margin-left:0.4em;
+}
+
+/* アイコン間隔（ここで調整） */
+.footer-left .social-icons a{
+  display:flex;
+  align-items:center;
+  margin-right:-0.5em !important;
+  text-decoration:none !important;
+}
+
+/* 最後の余白削除 */
+.footer-left .social-icons a:last-child{
+  margin-right:0 !important;
+}
+
+/* アイコンサイズ */
+.footer-left .social-icons svg,
+.footer-left .social-icons img{
+  width:14px;
+  height:14px;
+}
+
+/* =========================
+   page top
+========================= */
+
+.footer-right a{
+  text-decoration:none !important;
+}
+
+/* =========================
+   link decoration reset
+========================= */
+
+.footer a,
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:active{
+  text-decoration:none !important;
+  border-bottom:none !important;
+  box-shadow:none !important;
 }

@@ -1,6 +1,13 @@
-<footer class="kei-footer">
-  <div class="kei-footer-inner">
-    <a href="/" class="kei-footer-home">© 2026 余白 / yohaku</a>
-    <a href="#top">page top</a>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <span>© {{ now.Year }}　余白 / yohaku</span>
+      {{ $dict := dict "align" "left" "Site" .Site }}
+      {{ partial "social_icons.html" $dict }}
+    </div>
+
+    <div class="footer-right">
+      <a href="#top" class="footer-link">page top</a>
+    </div>
   </div>
 </footer>
