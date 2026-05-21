@@ -1,16 +1,20 @@
 ---
 title: ""
 hideMeta: true
-description: "急がない時間のための、対話の場"
+description: "言葉を、すぐ結論にしなくていい対話の場"
 ---
 
+<section class="top-message">
+  <h2>言葉を「答え」にしなくていい時間。</h2>
 
+  <p>まとまっていなくても、途中で止まってもいい。</p>
 
-<div class="hero">
-  <img class="hero-img" src="/img/top.jpg" alt="">
-  <div class="hero-text">
-    <p>急がない時間に、そっと同席します。</p>
-<!--    <p>答えを出すことよりも、</p>
-    <p>自分のペースに戻るために。</p>-->
-  </div>
-</div>
+  <p>
+    考えながら話したり、話してから考えたり。<br>
+    すぐ結論にしないための、対話の場です。
+  </p>
+</section>
+
+<figure class="hero">
+  <img class="hero-img" src="/img/top.png" alt="">
+</figure>

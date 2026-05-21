@@ -1,13 +1,35 @@
-/* 全体（UI含む） */
+/* =========================
+   Base
+========================= */
+
 body {
-  font-size: 14.5px !important; /* 14〜15.5で調整 */
+  font-size: 14.5px !important;
   line-height: 1.75;
+  background: linear-gradient(
+    180deg,
+    #edece2 0%,
+    #f2f1ea 28%,
+    #eef3f7 62%,
+    #fcfdfd 100%
+  ) !important;
 }
+
 .main {
   padding-top: 2rem;
 }
 
-/* PaperModの本文ブロックは別にサイズを持つことがあるので潰す */
+.main,
+.page-header,
+.post-single,
+.entry,
+.terms-tags {
+  background: transparent !important;
+}
+
+/* =========================
+   Typography
+========================= */
+
 .post-content,
 .post-single,
 .entry-content,
@@ -15,140 +37,146 @@ body {
   font-size: 1em !important;
 }
 
-/* 見出しがデカい問題も同時に落とす（必要なら調整） */
-.post-title { font-size: 1.6rem !important; }
-h1 { font-size: 1.9rem !important; }
-h2 { font-size: 1.35rem !important; }
-h3 { font-size: 1.15rem !important; }
+/* タイトル */
 
-/* ナビやフッタが相対で大きい場合 */
-.nav, .menu, .logo, .header {
+.post-title {
+  font-size: 1.45rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+/* 見出し */
+
+h1 {
+  font-size: 1.65rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  line-height: 1.8;
+  margin-top: 4.5rem;
+  margin-bottom: 1.8rem;
+}
+
+h3 {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  line-height: 1.7;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* 本文 */
+
+.post-content p {
+  line-height: 2;
+  margin-bottom: 1.6rem;
+}
+
+/* 本文位置 */
+
+.post-content,
+.page-content,
+.entry-content {
+  padding-left: 3rem !important;
+  padding-right: 0.6rem !important;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+  margin-left: -0.6rem;
+}
+
+/* =========================
+   Header / Logo
+========================= */
+
+.nav,
+.menu,
+.logo,
+.header {
   font-size: 0.95em !important;
 }
 
-body{
-  background: linear-gradient(180deg, #f3f1ec 0%, #eef2f4 100%) !important;
-}
-
-/* PaperModが塗ってくる背景を消す */
-.main, .page-header, .post-single, .entry, .terms-tags {
-  background: transparent !important;
-}
-
-/* homeだけ：本文先頭の画像 */
-.home .post-content p:first-child img{
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
-  margin: 8px 0 28px;
-  display: block;
-}
-/* トップページのロゴだけ明朝 */
 body .logo {
- font-family: "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  font-family:
+    "YuMincho",
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    "MS PMincho",
+    serif;
+
   font-weight: normal;
   letter-spacing: 0.02em;
 }
 
-/* 背景グラデーション：上やや濃く、下はほぼ白 */
-body {
-  background: linear-gradient(
-    180deg,
-    #edece2 0%,   /* 黄色を抑えて青グレー寄り */
-    #f2f1ea 28%,
-    #eef3f7 62%,
-    #fcfdfd 100%
-  ) !important;
+/* =========================
+   Top page
+========================= */
+
+.top-message {
+  max-width: 540px;
+  padding-top: 3rem;
 }
 
-
-/* PaperModが塗る背景を透明にして、グラデを見せる */
-.main, .page-header, .post-single, .entry, .terms-tags {
-  background: transparent !important;
+.top-message h2 {
+  font-size: 1.35rem !important;
+  font-weight: 500 !important;
+  line-height: 1.9;
+  margin-top: 0;
+  margin-bottom: 2.2rem;
 }
 
-/* トップのヒーロー */
-.hero{
-  position: relative;
-  border-radius: 10px;
+.top-message p {
+  line-height: 2.2;
+  margin-bottom: 2rem;
+}
+
+/* トップ画像 */
+
+.hero {
+  max-width: 420px;
+  width: 72%;
+  margin-top: 3.2rem;
+  margin-left: 4.2rem;
+  margin-bottom: 4rem;
+  border-radius: 6px;
   overflow: hidden;
-  margin: 12px 0 28px;
 }
 
-.hero-img{
+.hero-img {
   width: 100%;
   height: auto;
   display: block;
-  filter: contrast(1.05); /* 任意：写真が眠い時だけ */
+  filter: contrast(1.03);
 }
 
-/* 画像上の本文 */
-.hero-text{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+/* =========================
+   About
+========================= */
 
-  padding: 18px 18px 16px;
-  background: linear-gradient(
-    180deg,
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.42) 100%
-  );
-
-  color: rgba(255,255,255,0.86);
-  text-indent: 0; /* ①の字下げを殺す（hero内だけ） */
-}
-
-.hero-text p{
-  margin: 0.25em 0;
-  text-indent: 0; /* 念のため */
-  font-size: 16px !important; /* 14〜15.5で調整 */
-  line-height: 2;
-}
-
-/* 本文ブロックを内側に（PaperModに勝つ） */
-.post-content,
-.page-content,
-.entry-content {
-  padding-left: 3.0rem !important;
+body.page-about .post-content {
+  padding-left: 1.4rem !important;
   padding-right: 0.6rem !important;
 }
-.post-content h1,
-.post-content h2,
-.post-content h3{
-  margin-left: -0.6rem;
-}
 
-/* ヒーローは本文インデントの影響を受けない */
-.hero { margin-left: -3rem; margin-right: -0.6rem; }
-.hero, .hero * { box-shadow:none !important; }
-
-/* ヒーロー内の画像は余白ゼロ（帯の正体） */
-.hero-img {
-  margin: 0 !important;
-}
-
-/* 画像を包む要素の余白もゼロにする（保険） */
-.hero p,
-.hero figure {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* About：冒頭を“導入”として整える */
 body.page-about .post-content > p:first-of-type,
-body.page-about .post-content > p:nth-of-type(2){
+body.page-about .post-content > p:nth-of-type(2) {
   margin-top: 0;
   margin-bottom: 0.75em;
 }
 
-/* About：冒頭ブロックを少しだけ内側＆行間を整える */
-body.page-about .post-content{
-  padding-left: 1.4rem !important;
-  padding-right: 0.6rem !important;
-}
-/* タイトル直下に出る説明（.Description）を非表示 */
+/* =========================
+   PaperMod cleanup
+========================= */
+
 .page-header .post-description,
 .page-header .entry-description,
 .page-header .page-description,
@@ -160,85 +188,112 @@ body.page-about .post-content{
    Footer
 ========================= */
 
-.footer{
-  margin-top:2rem;
-  padding:2rem 2rem 1rem;
-  font-size:0.875rem;
+.footer {
+  margin-top: 2rem;
+  padding: 2rem 2rem 1rem;
+  font-size: 0.875rem;
 }
 
-/* 左右レイアウト */
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* 左側（コピー＋SNS） */
-.footer-left{
-  display:flex;
-  align-items:center;
-}
-.footer-right a{
-  font-size:0.8em;
-  opacity:0.7;
+.footer-left {
+  display: flex;
+  align-items: center;
 }
 
-.footer-right a:hover{
-  opacity:1;
-}
-/* コピー */
-.footer-left span{
-  letter-spacing:0.03em;
+.footer-left span {
+  letter-spacing: 0.03em;
 }
 
-/* =========================
-   SNS icons
-========================= */
-
-.footer-left .social-icons{
-  display:flex;
-  align-items:center;
-  margin-left:0.4em;
+.footer-right a {
+  font-size: 0.8em;
+  opacity: 0.7;
+  text-decoration: none !important;
 }
 
-/* アイコン間隔（ここで調整） */
-.footer-left .social-icons a{
-  display:flex;
-  align-items:center;
-  margin-right:-0.5em !important;
-  text-decoration:none !important;
+.footer-right a:hover {
+  opacity: 1;
 }
 
-/* 最後の余白削除 */
-.footer-left .social-icons a:last-child{
-  margin-right:0 !important;
+/* SNS */
+
+.footer-left .social-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 0.4em;
 }
 
-/* アイコンサイズ */
+.footer-left .social-icons a {
+  display: flex;
+  align-items: center;
+  margin-right: -0.5em !important;
+  text-decoration: none !important;
+}
+
+.footer-left .social-icons a:last-child {
+  margin-right: 0 !important;
+}
+
 .footer-left .social-icons svg,
-.footer-left .social-icons img{
-  width:14px;
-  height:14px;
+.footer-left .social-icons img {
+  width: 14px;
+  height: 14px;
 }
 
-/* =========================
-   page top
-========================= */
-
-.footer-right a{
-  text-decoration:none !important;
-}
-
-/* =========================
-   link decoration reset
-========================= */
+/* Link reset */
 
 .footer a,
 .footer a:link,
 .footer a:visited,
 .footer a:hover,
-.footer a:active{
-  text-decoration:none !important;
-  border-bottom:none !important;
-  box-shadow:none !important;
+.footer a:active {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+  .post-content,
+  .page-content,
+  .entry-content {
+    padding-left: 1.4rem !important;
+    padding-right: 1.4rem !important;
+  }
+
+  .top-message {
+    max-width: none;
+    padding-top: 1.2rem;
+  }
+
+  .top-message h2 {
+    font-size: 1.2rem !important;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+  }
+
+  .top-message p {
+    line-height: 2;
+    margin-bottom: 1.7rem;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: none;
+    margin-top: 3rem;
+    margin-left: 0;
+    margin-bottom: 3rem;
+  }
+
+  .footer {
+    padding: 2rem 1.4rem 1rem;
+  }
 }
